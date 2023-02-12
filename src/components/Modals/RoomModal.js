@@ -208,27 +208,28 @@ const RoomModal = (props) => {
                         <form onSubmit={props.action === 'update' ? updateHotelRoom : addNewRoom}>
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 value={room.name} onChange={(e) => setRoom({ ...room, name: e.target.value })}
-                                placeholder="Room name">
+                                placeholder="Nom chambre">
                             </Input>
 
                             <TextArea required="true" style={{ marginBottom: '16px' }}
                                 value={room.description} onChange={(e) => setRoom({ ...room, description: e.target.value })}
-                                placeholder="Room description"></TextArea>
+                                placeholder="description chambre"></TextArea>
 
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 type="number"
                                 value={room.occupancy} onChange={(e) => setRoom({ ...room, occupancy: Number(e.target.value) })}
-                                placeholder="Occupancy"></Input>
+                                placeholder="nombre des lits"></Input>
 
                             <TextArea required="true" style={{ marginBottom: '16px' }}
                                 value={room.others}
                                 onChange={(e) => setRoom({ ...room, others: e.target.value.split(',') })}
-                                placeholder="Room specifications (Add using ',')"></TextArea>
+                                placeholder="Spécifications de la chambre (Ajouter en utilisant ',')"></TextArea>   
+                                {/* Spécifications de la chambre (Ajouter en utilisant ',') */}
 
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 type="number"
                                 value={room.price} onChange={(e) => setRoom({ ...room, price: Number(e.target.value) })}
-                                placeholder="Price"></Input>
+                                placeholder="Prix"></Input>
 
                             <RoomSelectionBox>
                                 {roomSlots.map(t => (

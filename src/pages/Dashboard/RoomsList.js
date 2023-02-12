@@ -15,12 +15,12 @@ const RoomsList = (props) => {
   const [loading, setLoading] = useState(false);
   const listItems = [
     "Image",
-    "Room Name",
+    "Nom chambre",
     "Description",
-    "Price",
+    "Peix",
     "Occupancy",
-    "Ratings",
-    "Added On",
+    "Notes",
+    "Ajouté le",
     "Actions",
   ];
   let rooms = props.rooms.filter((r) => {
@@ -32,7 +32,7 @@ const RoomsList = (props) => {
       <SearchBar
         query={query}
         setQuery={setQuery}
-        placeholder="Search rooms by names..."
+        placeholder="Rechercher des chambres par noms..."
       />
 
       <ListHeader list={listItems} />

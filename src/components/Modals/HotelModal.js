@@ -179,12 +179,12 @@ const HotelModal = (props) => {
                         <form onSubmit={props.action === 'update' ? updateCurHotel : addNewHotel}>
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.name} onChange={(e) => setHotel({ ...hotel, name: e.target.value })}
-                                placeholder="Hotel name">
+                                placeholder="nom Hotel">
                             </Input>
 
                             <TextArea required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.description} onChange={(e) => setHotel({ ...hotel, description: e.target.value })}
-                                placeholder="Hotel description"></TextArea>
+                                placeholder="description Hotel"></TextArea>
 
                             <Input required="true" style={{ marginBottom: '16px' }}
                                 value={hotel.location} onChange={(e) => setHotel({ ...hotel, location: e.target.value })}

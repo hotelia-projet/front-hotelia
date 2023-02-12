@@ -76,8 +76,8 @@ const Stat = (props) => {
     <Container>
       <Grid>
         <Block style={{ background: `${getRandomColor()}` }}>
-          <h2>Rs. {getTotalEarnings()}</h2>
-          <p>Total Earnings</p>
+          <h2>{getTotalEarnings()}</h2>
+          <p>Total des gains</p>
         </Block>
         <Block
           style={{ background: `${getRandomColor()}` }}
@@ -90,16 +90,16 @@ const Stat = (props) => {
           }
         >
           <h2>{bookings.length}</h2>
-          <p>Total Bookings</p>
-          <p>(Click To See Bookings)</p>
+          <p>Total réservation</p>
+          <p>(Cliquez pour voir les réservations)</p>
         </Block>
         <Block style={{ background: `${getRandomColor()}` }}>
           <h2>{hotel.rooms.length}</h2>
-          <p>Total Rooms</p>
+          <p>Total chambre</p>
         </Block>
         <Block style={{ background: `${getRandomColor()}` }}>
           <h2>{getTodayBookings()}</h2>
-          <p>Bookings For Today</p>
+          <p>Réservations pour aujourd'hui</p>
         </Block>
       </Grid>
     </Container>

@@ -122,18 +122,18 @@ const Dashboard = () => {
 
   const controls = [
     {
-      label: "Create Room",
+      label: "Nouvelle chambre",
       icon: <AddIcon />,
       action: () =>
         setRoomModal({
           state: true,
-          title: "Add New Room",
+          title: "Ajouter une nouvelle chambre",
           params: null,
           action: "add",
         }),
     },
     {
-      label: "Edit Hotel",
+      label: "Modifier",
       icon: <EditIcon />,
       action: () =>
         setHotelModal({
@@ -191,10 +191,10 @@ const Dashboard = () => {
             <p>{hotel.location}</p>
             <p className="description">{hotel.description}</p>
             <CardText>
-              Total Rooms : <span>{hotel.totalRooms}</span>
+              Total chambre : <span>{hotel.totalRooms}</span>
             </CardText>
             <CardText>
-              Added on : <span>{getDate(hotel.addedOn, "Do MMMM, YYYY")}</span>
+              Ajouté le : <span>{getDate(hotel.addedOn, "Do MMMM, YYYY")}</span>
             </CardText>
             <CardText>
               Manager: <span>{hotel.manager.name}</span>

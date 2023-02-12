@@ -63,9 +63,9 @@ const SearchBox = (props) => {
 
     return (
         <>
-            <FormTitle style={{ color: '#fff', marginBottom: '20px' }}>Rechercher des hôtels</FormTitle>
+            <FormTitle style={{ color: '#fff', marginBottom: '20px' }}>Réservations</FormTitle>
             <form onSubmit={handleSearch}>
-                <Input placeholder="Enter hotel name or location"
+                <Input placeholder="Entrez le nom ou l'emplacement de l'hôtel"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     required={true}></Input>
