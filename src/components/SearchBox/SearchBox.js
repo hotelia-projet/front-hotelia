@@ -43,7 +43,7 @@ const SearchBox = (props) => {
     const handleSearch = (e) => {
         e.preventDefault()
         if(count.children===0 && count.adults===0) {
-            toast.warning("Please enter number of people.",{
+            toast.warning("Entrez le nombre d'occupants.",{
                 autoClose: 5500,
                 pauseOnHover: true
             })
@@ -63,27 +63,27 @@ const SearchBox = (props) => {
 
     return (
         <>
-            <FormTitle style={{ color: '#fff', marginBottom: '20px' }}>Rechercher des hôtels</FormTitle>
+            <FormTitle style={{ color: '#fff', marginBottom: '20px' }}>Rechercher un hôtel</FormTitle>
             <form onSubmit={handleSearch}>
-                <Input placeholder="Enter hotel name or location"
+                <Input placeholder="Entrez le pays"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     required={true}></Input>
                 <Extras>
                     <InputContainer style={{ marginRight: '16px' }}>
-                        <label>Check-In</label>
+                        <label>Arrivée</label>
                         <DatePicker selected={checkIn}
                             onChange={(date) => setCheckIn(date)} />
                     </InputContainer>
 
                     <InputContainer style={{ marginRight: '16px' }}>
-                        <label>Check-Out</label>
+                        <label>Départ</label>
                         <DatePicker selected={checkOut}
                             onChange={(date) => setCheckOut(date)} />
                     </InputContainer>
 
                     <InputContainer>
-                        <label>Personne</label>
+                        <label>Nombre de personnes</label>
                         <SelectOccupancy count={count} setCount={setCount}/>
                     </InputContainer>
 
@@ -91,7 +91,7 @@ const SearchBox = (props) => {
 
                 <FormButton type="submit"
                     style={{ margin: '18px 0 0 auto', fontSize: '16px', width: '140px' }}>
-                    Recherche
+                    Rechercher
                 </FormButton>
 
             </form>
