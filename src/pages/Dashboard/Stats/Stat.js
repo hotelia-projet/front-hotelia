@@ -77,29 +77,29 @@ const Stat = (props) => {
       <Grid>
         <Block style={{ background: `${getRandomColor()}` }}>
           <h2>Rs. {getTotalEarnings()}</h2>
-          <p>Total Earnings</p>
+          <p>Gain total</p>
         </Block>
         <Block
           style={{ background: `${getRandomColor()}` }}
           onClick={() =>
             props.setBookingsModal({
               state: true,
-              title: "Hotel Bookings",
+              title: "Réservation hotel",
               param: bookings,
             })
           }
         >
           <h2>{bookings.length}</h2>
-          <p>Total Bookings</p>
-          <p>(Click To See Bookings)</p>
+          <p>Nombre de réservations</p>
+          <p>(Appuyez pour voir les réservations)</p>
         </Block>
         <Block style={{ background: `${getRandomColor()}` }}>
           <h2>{hotel.rooms.length}</h2>
-          <p>Total Rooms</p>
+          <p>Nombre de chambres</p>
         </Block>
         <Block style={{ background: `${getRandomColor()}` }}>
           <h2>{getTodayBookings()}</h2>
-          <p>Bookings For Today</p>
+          <p>Réservations du jour</p>
         </Block>
       </Grid>
     </Container>

@@ -124,9 +124,9 @@ const PaymentScreen = (props) => {
                 {!loading ? (
                     <>
                         <div className="section">
-                            <Text>Customer Info</Text>
+                            <Text>Info client</Text>
                             <Text className="small">
-                                Name: <span>{user.name}</span>
+                                Nom: <span>{user.name}</span>
                             </Text>
                             <Text className="small">
                                 Email: <span>{user.email}</span>
@@ -142,31 +142,31 @@ const PaymentScreen = (props) => {
                                 Hotel: <span>{room.hotel.name}</span>
                             </Text>
                             <Text className="small">
-                                Room: <span>{room.name}</span>
+                                Chambre: <span>{room.name}</span>
                             </Text>
                             <Text className="small" style={{ margin: '-10px 0 10px 0' }}>
-                                Room Number(s):
+                                Numéro de chambre(s):
                                 {booking.roomNumbers.map(r =>
                                     (<span className="highlight" style={{ margin: '4px 2px' }}>{r}</span>)
                                 )}
                             </Text>
                             <Text className="small">
-                                Price (Each room): <span>Rs. {room.price}</span>
+                                Prix (Par chambre): <span>Rs. {room.price}</span>
                             </Text>
                             <Text className="small">
-                                Total Cost: <span>Rs. {booking.amount}</span>
+                                Cout total: <span>Rs. {booking.amount}</span>
                             </Text>
                         </div>
                         <div className="section">
-                            <Text>Payment Info</Text>
+                            <Text>Info Paiement</Text>
                             <Text className="small">
-                                Room(s) Cost: <span>Rs. {booking.amount}</span>
+                                Cout chambre(s): <span>Rs. {booking.amount}</span>
                             </Text>
                             <Text className="small">
-                                Tax: <span>Rs. {20}</span>
+                                Taxe: <span>Rs. {20}</span>
                             </Text>
                             <Text className="small">
-                                Total Cost: 
+                                Cout total: 
                                 <span>Rs. {booking.amount + 20}</span>
                             </Text>
                             <StripeCheckout
@@ -177,7 +177,7 @@ const PaymentScreen = (props) => {
                                 amount={(booking.amount + 20) * 100}
                             />
                             <Text className="small" style={{ marginTop: '16px', color: 'grey' }}>
-                                *You can also pay later
+                                *Vous payez plus tard
                             </Text>
                         </div>
                     </>
@@ -186,10 +186,10 @@ const PaymentScreen = (props) => {
             </Layout>
             <Layout className="buttons">
                 <FormButton onClick={() => navigate(`/payment/${room.hotel.id}/${room.id}/1`, { state: booking })}>
-                    Go Back
+                    Revenir en arrière
                 </FormButton>
                 <FormButton onClick={() => handleBook()} disabled={loading}>
-                    Pay Later
+                    Payez plus tard
                 </FormButton>
             </Layout>
         </>

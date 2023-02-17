@@ -191,10 +191,10 @@ const Dashboard = () => {
             <p>{hotel.location}</p>
             <p className="description">{hotel.description}</p>
             <CardText>
-              Total Rooms : <span>{hotel.totalRooms}</span>
+              Nombre de chambres : <span>{hotel.totalRooms}</span>
             </CardText>
             <CardText>
-              Added on : <span>{getDate(hotel.addedOn, "Do MMMM, YYYY")}</span>
+              Date d'ajout : <span>{getDate(hotel.addedOn, "Do MMMM, YYYY")}</span>
             </CardText>
             <CardText>
               Manager: <span>{hotel.manager.name}</span>

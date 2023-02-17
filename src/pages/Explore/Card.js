@@ -49,7 +49,7 @@ const Card = (props) => {
         className="action-slider"
         onClick={() => navigate(`/hotel/${hotel.id}`, { state: searchData })}
       >
-        Book Room
+        Réservez chambre
       </div>
       <Image
         style={{
@@ -67,7 +67,7 @@ const Card = (props) => {
           <span className="highlight">5.0</span> Ratings
         </Text>
         <Text className="small">Starting from Rs. 1151</Text>
-        <Text className="small">{data.rooms} Rooms Available</Text>
+        <Text className="small">{data.rooms} chambres disponibles</Text>
       </HotelDetails>
     </CardContainer>
   );

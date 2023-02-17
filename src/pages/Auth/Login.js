@@ -63,7 +63,7 @@ const Login = () => {
                 {!loading ? (
                     <FormContainer>
                         <form className="form-box" onSubmit={userLogin}>
-                            <FormTitle style={{ marginBottom: '20px' }}>Log In</FormTitle>
+                            <FormTitle style={{ marginBottom: '20px' }}>Connexion</FormTitle>
                             <Input style={{ margin: '10px 0' }}
                                 placeholder="Email"
                                 value={data.email}
@@ -77,7 +77,7 @@ const Login = () => {
                                 <FormButton style={{ border: '2px solid #ff6e29', background: "#fff", color: "#ff6e29" }}
                                     onClick={() => navigate('/register')}
                                 >Register</FormButton>
-                                <FormButton type="submit">Log In</FormButton>
+                                <FormButton type="submit">Se connecter</FormButton>
                             </ButtonsContainer>
                         </form>
                     </FormContainer>

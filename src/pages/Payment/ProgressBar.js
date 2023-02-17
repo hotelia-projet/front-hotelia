@@ -58,19 +58,19 @@ const ProgressBar = (props) => {
         <Bar>
             <Steps className={`${step>=1 ? 'cur' : ''}`}>
                 <div>1</div>
-                <Text className="small">Curtomer Info</Text>
+                <Text className="small">Info client</Text>
             </Steps>
 
             <Line className={`${step>=2 ? 'cur' : ''}`}/>
             <Steps className={`${step>=2 ? 'cur' : ''}`}>
                 <div>2</div>
-                <Text className="small">Payment</Text>
+                <Text className="small">Paiement</Text>
             </Steps>
 
             <Line className={`${step>=3 ? 'cur' : ''}`}/>
             <Steps className={`${step>=3 ? 'cur' : ''}`}>
                 <div>3</div>
-                <Text className="small">Booking Confirmed</Text>
+                <Text className="small">Réservation confirmée</Text>
             </Steps>
         </Bar>
     )

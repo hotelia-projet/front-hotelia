@@ -15,7 +15,7 @@ const BookingsList = (props) => {
 
     const [query, setQuery] = useState('')
     const [loading, setLoading] = useState(false)
-    const listItems = ['Nom Hotel', 'Chambre', 'Depuis', 'pour', 'Réservé le', 'Montant', 'Payé', 'Actions']
+    const listItems = ['Hotel', 'Chambre', 'Date d\'arrivée', 'Date de départ', 'Date de réservation', 'Montant', 'Payé', 'Actions']
 
     const curDate = new Date().setHours(0, 0, 0, 0)
 
@@ -36,7 +36,7 @@ const BookingsList = (props) => {
                 setQuery={setQuery}
                 placeholder="Rechercher des réservations par nom d'hôtel..." />
 
-            <Text style={{ fontSize: '20px', margin: '26px 0' }}>Réservations à venir</Text>
+            <Text style={{ fontSize: '20px', margin: '26px 0' }}>Nouvelles réservations</Text>
             <ListHeader list={listItems} />
             {!loading ? upcomingBookings.map(booking =>
                 <ListItem key={booking.id}
@@ -46,7 +46,7 @@ const BookingsList = (props) => {
                     setModal={props.setModal} />
             ) : <Loader />}
             {upcomingBookings.length === 0 &&
-                <Text className="small" style={{ textAlign: 'center', marginTop: '20px' }}>Aucune réservation</Text>}
+                <Text className="small" style={{ textAlign: 'center', marginTop: '20px' }}>Vous n'avez pas de réservation</Text>}
 
             <br/>
 
@@ -60,7 +60,7 @@ const BookingsList = (props) => {
                     setModal={props.setModal} />
             ) : <Loader />}
             {oldBookings.length === 0 &&
-                <Text className="small" style={{ textAlign: 'center', marginTop: '20px' }}>Aucune réservation</Text>}
+                <Text className="small" style={{ textAlign: 'center', marginTop: '20px' }}>Vous n'avez pas de réservation</Text>}
         </Container>
     )
 }
