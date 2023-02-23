@@ -43,10 +43,10 @@ const CustomerInfo = (props) => {
                         )}
                     </Text>
                     <Text className="small">
-                        Prix (Par chambre): <span>Rs. {room.price}</span>
+                        Prix (Par chambre): <span>{room.price} €</span>
                     </Text>
                     <Text className="small">
-                        Cout total: <span>Rs. {booking.amount}</span>
+                        Cout total: <span>{booking.amount} €</span>
                     </Text>
                 </div>
             </Layout>

@@ -31,7 +31,7 @@ const PaymentScreen = (props) => {
                 roomNumbers: booking.roomNumbers,
                 bookedBy: booking.bookedBy,
                 paid: booking.paid,
-                amount: booking.amount + 20,
+                amount: booking.amount + 90,
                 people: booking.people,
                 room: booking.room,
                 hotel: booking.hotel
@@ -81,7 +81,7 @@ const PaymentScreen = (props) => {
                     roomNumbers: booking.roomNumbers,
                     bookedBy: booking.bookedBy,
                     paid: booking.paid,
-                    amount: booking.amount + 20,
+                    amount: booking.amount + 90,
                     people: booking.people,
                     room: booking.room,
                     hotel: booking.hotel
@@ -124,20 +124,14 @@ const PaymentScreen = (props) => {
                 {!loading ? (
                     <>
                         <div className="section">
-                            <Text>Info client</Text>
+                            <Text>Infos client</Text>
                             <Text className="small">
                                 Nom: <span>{user.name}</span>
                             </Text>
                             <Text className="small">
                                 Email: <span>{user.email}</span>
                             </Text>
-                            <Text className="small">
-                                Age: <span>{getAge(user.dob)}</span>
-                            </Text>
-                            <Text className="small">
-                                Total: <span>{booking.people.adults + booking.people.children}</span>
-                            </Text>
-                            <Text style={{ marginTop: '20px' }}>Booking Info</Text>
+                            <Text style={{ marginTop: '20px' }}>Informations</Text>
                             <Text className="small">
                                 Hotel: <span>{room.hotel.name}</span>
                             </Text>
@@ -145,39 +139,26 @@ const PaymentScreen = (props) => {
                                 Chambre: <span>{room.name}</span>
                             </Text>
                             <Text className="small" style={{ margin: '-10px 0 10px 0' }}>
-                                Numéro de chambre(s):
+                                Numéro de chambre(s): <strong>1</strong>
                                 {booking.roomNumbers.map(r =>
                                     (<span className="highlight" style={{ margin: '4px 2px' }}>{r}</span>)
                                 )}
                             </Text>
                             <Text className="small">
-                                Prix (Par chambre): <span>Rs. {room.price}</span>
+                                Prix (Par chambre): <span>{room.price} €</span>
                             </Text>
                             <Text className="small">
-                                Cout total: <span>Rs. {booking.amount}</span>
+                                Cout total: <span>{booking.amount} €</span>
                             </Text>
                         </div>
                         <div className="section">
-                            <Text>Info Paiement</Text>
+                            <Text>Infos paiement</Text>
                             <Text className="small">
-                                Cout chambre(s): <span>Rs. {booking.amount}</span>
-                            </Text>
-                            <Text className="small">
-                                Taxe: <span>Rs. {20}</span>
+                                Cout chambre(s): <span> {booking.amount + 90} €</span>
                             </Text>
                             <Text className="small">
                                 Cout total: 
-                                <span>Rs. {booking.amount + 20}</span>
-                            </Text>
-                            <StripeCheckout
-                                token={onToken}
-                                stripeKey="pk_test_51Hr13fE7BvSkBO4prE35EeVzyGVKfQCPfpfcOZZkSLfa4jfONQeEOrd9A4wFIERlRXuVpBu3NYVm1YwCrFfY0gs400dAaCrTp0"
-                                name=""
-                                currency='USD'
-                                amount={(booking.amount + 20) * 100}
-                            />
-                            <Text className="small" style={{ marginTop: '16px', color: 'grey' }}>
-                                *Vous payez plus tard
+                                <span> {booking.amount + 90} €</span>
                             </Text>
                         </div>
                     </>

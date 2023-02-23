@@ -45,9 +45,9 @@ const ListItem = (props) => {
             <Tippy interactive={true} content={getEasyDate(props.data.from)} placement="bottom"><Text>{getDate(props.data.from)}</Text></Tippy>
             <Tippy interactive={true} content={getEasyDate(props.data.to)} placement="bottom"><Text>{getDate(props.data.to)}</Text></Tippy>
             <Tippy interactive={true} content={getEasyDate(props.data.bookedOn)} placement="bottom"><Text>{getDate(props.data.bookedOn)}</Text></Tippy>
-            <Tippy interactive={true} content={props.data.amount} placement="bottom"><Text>Rs. {props.data.amount}</Text></Tippy>
-            <Tippy interactive={true} content={props.data.paid ? 'Paid' : 'Not Paid'} placement="bottom">
-                <Text>{props.data.paid ? 'Paid' : 'Not Paid'}</Text>
+            <Tippy interactive={true} content={props.data.amount} placement="bottom"><Text>{props.data.amount} €</Text></Tippy>
+            <Tippy interactive={true} content={props.data.paid ? 'Paid' : 'Payée'} placement="bottom">
+                <Text>{props.data.paid ? 'Paid' : 'Payée'}</Text>
             </Tippy>
             <ActionsContainer>
                 <Button onClick={() => props.setModal({state: true, param: props.data, title: 'Booking Details'})}

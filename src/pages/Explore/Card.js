@@ -64,9 +64,9 @@ const Card = (props) => {
         <Text className="small clamp">{hotel.description}</Text>
         <Text className="small">
           {" "}
-          <span className="highlight">5.0</span> Ratings
+          <span className="highlight">5.0</span> Etoiles
         </Text>
-        <Text className="small">Starting from Rs. 1151</Text>
+        <Text className="small">Commence à 1151</Text>
         <Text className="small">{data.rooms} chambres disponibles</Text>
       </HotelDetails>
     </CardContainer>
