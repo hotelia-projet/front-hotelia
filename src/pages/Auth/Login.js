@@ -76,7 +76,7 @@ const Login = () => {
                             <ButtonsContainer>
                                 <FormButton style={{ border: '2px solid #ff6e29', background: "#fff", color: "#ff6e29" }}
                                     onClick={() => navigate('/register')}
-                                >Register</FormButton>
+                                >S'enregistrer</FormButton>
                                 <FormButton type="submit">Se connecter</FormButton>
                             </ButtonsContainer>
                         </form>

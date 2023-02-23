@@ -102,7 +102,7 @@ const RoomDetails = (props) => {
                     <Text className="clip">{room.name}</Text>
                     <Text className="clamp small" style={{ marginTop: '12px' }}>{room.description}</Text>
                     <Text className="small">Notes: <span className="highlight">{ratings}</span></Text>
-                    <Text className="small">Prix: <span>{room.price}/-</span></Text>
+                    <Text className="small">Prix: <span>{room.price} €</span></Text>
                     {params['view']===undefined ? (
                         <FormButton onClick={handleBook}
                         style={{ display: 'initial', marginRight: '16px' }}>
