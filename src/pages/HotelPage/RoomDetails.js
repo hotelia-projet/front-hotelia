@@ -74,7 +74,7 @@ const RoomDetails = (props) => {
             navigate(`/payment/${room.hotel.id}/${room.id}/1`, { state: bookingData })
         }
         else {
-            toast.error("No available rooms.", {
+            toast.error("Pas de chambres disponibles.", {
                 autoClose: 5500,
                 pauseOnHover: true
             })
@@ -101,12 +101,12 @@ const RoomDetails = (props) => {
                 <Details style={{ width: '40%', marginLeft: '20px' }}>
                     <Text className="clip">{room.name}</Text>
                     <Text className="clamp small" style={{ marginTop: '12px' }}>{room.description}</Text>
-                    <Text className="small">Ratings: <span className="highlight">{ratings}</span></Text>
-                    <Text className="small">Price: <span>{room.price}/-</span></Text>
+                    <Text className="small">Notes: <span className="highlight">{ratings}</span></Text>
+                    <Text className="small">Prix: <span>{room.price} €</span></Text>
                     {params['view']===undefined ? (
                         <FormButton onClick={handleBook}
                         style={{ display: 'initial', marginRight: '16px' }}>
-                        Book Room
+                        Réservez chambre
                     </FormButton>
                     ) : null}
                     {roomNumbers.length !== 0 ? (
@@ -115,7 +115,7 @@ const RoomDetails = (props) => {
                             value={roomsNum}>
                             {roomNumbers.map((r, i) => (
                                 <option value={i + 1}
-                                >{`${i === 0 ? '1 Room' : `${i + 1} Rooms`} `}
+                                >{`${i === 0 ? '1 Chambre' : `${i + 1} Chambres`} `}
                                 </option>
                             ))}
                         </SelectBox>

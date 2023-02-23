@@ -142,7 +142,7 @@ const Profile = () => {
                         onChange={(e) => setCurUser({ ...curUser, name: e.target.value })}></Input>
                 </Fields>
                 <Fields>
-                    <label>pseudo</label>
+                    <label>Pseudo</label>
                     <Input value={user.username}></Input>
                 </Fields>
             </Fields>
@@ -162,7 +162,7 @@ const Profile = () => {
                 </Fields>
             </Fields>
 
-            {showBtn ? (<FormButton style={{ marginLeft: 'auto' }} onClick={updateUser}>Update & Save</FormButton>) : null}
+            {showBtn ? (<FormButton style={{ marginLeft: 'auto' }} onClick={updateUser}>Enrégistrer</FormButton>) : null}
         </PageContainer>
     )
 }

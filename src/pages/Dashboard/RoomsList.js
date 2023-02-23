@@ -53,7 +53,7 @@ const RoomsList = (props) => {
           className="small"
           style={{ textAlign: "center", marginTop: "20px" }}
         >
-          No Rooms
+          Pas de chambres disponibles
         </Text>
       )}
     </Container>

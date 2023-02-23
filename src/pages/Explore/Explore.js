@@ -48,7 +48,7 @@ const Explore = (props) => {
                         <Card data={s} params={location.state} />
                     )}
                     {data.searchHotels.length === 0 ?
-                        <Text style={{ color: 'grey', textAlign: 'center' }}>No Hotels Found</Text>
+                        <Text style={{ color: 'grey', textAlign: 'center' }}>Aucun hotel ne correspond pas à vos critères</Text>
                         : null}
                 </>
             )}

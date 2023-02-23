@@ -28,8 +28,8 @@ const BookingModal = (props) => {
 
                 <br />
 
-                <Text className="small">Booked By: <span>{booking.bookedBy.name}</span></Text>
-                <Text className="small">Username: <span>{booking.bookedBy.username}</span></Text>
+                <Text className="small">Reservee par: <span>{booking.bookedBy.name}</span></Text>
+                <Text className="small">Utilisateur: <span>{booking.bookedBy.username}</span></Text>
                 <Tippy interactive={true} content={getEasyDate(booking.bookedOn)} placement="bottom">
                     <Text className="small">Booked On: <span>{getDate(booking.bookedOn)}</span></Text>
                 </Tippy>
@@ -41,42 +41,42 @@ const BookingModal = (props) => {
 
                     <div style={{ flexBasis: '46%' }}>
                         <Text className="small">Hotel: <span>{booking.hotel.name}</span></Text>
-                        <Text className="small">Location: <span>{booking.location}</span></Text>
-                        <Text className="small">Room: <span>{booking.room.name}</span></Text>
+                        <Text className="small">Localisation: <span>{booking.location}</span></Text>
+                        <Text className="small">Chambre: <span>{booking.room.name}</span></Text>
                         <Tippy interactive={true} content={getEasyDate(booking.from)} placement="bottom">
-                            <Text className="small">From: <span>{getDate(booking.from)}</span></Text>
+                            <Text className="small">Depuis: <span>{getDate(booking.from)}</span></Text>
                         </Tippy>
                         <Tippy interactive={true} content={getEasyDate(booking.to)} placement="bottom">
-                            <Text className="small">To: <span>{getDate(booking.to)}</span></Text>
+                            <Text className="small">Vers: <span>{getDate(booking.to)}</span></Text>
                         </Tippy>
-                        <Text className="small">Duration:
+                        <Text className="small">Duree:
                             <span> {booking.days} {booking.days === 1 ? 'Day' : 'Days'}</span>
                         </Text>
                     </div>
 
                     <div style={{ flexBasis: '46%' }}>
-                        <Text className="small">Rooms: 
+                        <Text className="small">Chambres:
                             {booking.roomNumbers.map(r =>
                                 (<span className="highlight" style={{ margin: '4px 2px' }}>{r}</span>)
                             )}
                         </Text>
-                        <Text className="small">Number of persons: <span>{booking.numOfPeople}</span></Text>
-                        <Text className="small">Adults: <span>{booking.people.adults}</span></Text>
-                        <Text className="small">Children: <span>{booking.people.children}</span></Text>
+                        <Text className="small">Nombre de personnes: <span>{booking.numOfPeople}</span></Text>
+                        <Text className="small">Adultes: <span>{booking.people.adults}</span></Text>
+                        <Text className="small">Enfants: <span>{booking.people.children}</span></Text>
                     </div>
                 </FlexBox>
 
                 <br />
                 <hr />
                 <br />
-                <Text className="small">Room Price: <span>Rs. {booking.room.price}</span></Text>
-                <Text className="small">Amount {booking.paid ? 'Paid' : 'To Be Paid'}: <span>Rs. {booking.amount}</span></Text>
-                <Text className="small">Payment Status:
-                    <span> {booking.paid ? 'Paid' : 'Not Paid'}</span>
+                <Text className="small">Prix de la chambre: <span>{booking.room.price} €</span></Text>
+                <Text className="small">Prix {booking.paid ? 'Paid' : 'To Be Paid'}: <span>{booking.amount} €</span></Text>
+                <Text className="small">Paiement statut:
+                    <span> {booking.paid ? 'Paid' : 'Payée'}</span>
                 </Text>
                 <ButtonsContainer>
-                    <FormButton>View Hotel & Room</FormButton>
-                    {!booking.paid ? <FormButton onClick={payLink}>Pay Now</FormButton> : null}
+                    <FormButton>Voir les chambres</FormButton>
+                    {!booking.paid ? <FormButton onClick={payLink}>Payee maintenant</FormButton> : null}
                 </ButtonsContainer>
             </ModalBox>
         </ModalContainer>

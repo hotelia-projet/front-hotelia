@@ -69,13 +69,13 @@ const Register = () => {
                 {!loading ? (
                     <FormContainer>
                         <form className="form-box" onSubmit={register}>
-                            <FormTitle style={{ marginBottom: '20px' }}>Register</FormTitle>
+                            <FormTitle style={{ marginBottom: '20px' }}>Inscription</FormTitle>
                             <Input style={{ margin: '10px 0' }}
-                                placeholder="Name"
+                                placeholder="Nom"
                                 value={info.name}
                                 onChange={(e) => setInfo({ ...info, name: e.target.value })}></Input>
                             <Input style={{ margin: '10px 0' }}
-                                placeholder="Username"
+                                placeholder="Nom d'utilisateur"
                                 value={info.username}
                                 onChange={(e) => setInfo({ ...info, username: e.target.value })}></Input>
                             <Input style={{ margin: '10px 0' }}
@@ -95,7 +95,7 @@ const Register = () => {
                                 <FormButton style={{ border: '2px solid #ff6e29', background: "#fff", color: "#ff6e29" }}
                                     onClick={() => navigate('/login')}
                                 >Log In</FormButton>
-                                <FormButton type="submit">Register</FormButton>
+                                <FormButton type="submit">S'inscrire</FormButton>
                             </ButtonsContainer>
                         </form>
                     </FormContainer>

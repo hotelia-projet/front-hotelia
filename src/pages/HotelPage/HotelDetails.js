@@ -26,7 +26,7 @@ export const ManagerView = (props) => {
                 <Details style={{ width: '40%', marginLeft: '20px' }}>
                     <Text className="small">Location: <span>{hotel.location}</span></Text>
                     <Text className="small">Ratings: <span className="highlight">{ratings}</span></Text>
-                    <Text className="small">Price: <span>1500-5960/-</span></Text>
+                    <Text className="small">Price: <span>1500-5960€</span></Text>
                 </Details>
             </div>
             <Details style={{ marginTop: '20px' }}>
@@ -78,9 +78,9 @@ const HotelDetails = (props) => {
             <div style={{ display: 'flex', width: '100%' }}>
                 <Image style={{ backgroundImage: `url(${hotel.image ? hotel.image : HotelIMG})`, height: "300px", width: "60%", }} />
                 <Details style={{ width: '40%', marginLeft: '20px' }}>
-                    <Text className="small">Location: <span>{hotel.location}</span></Text>
-                    <Text className="small">Ratings: <span className="highlight">{ratings}</span></Text>
-                    <Text className="small">Price: <span>1500-5960/-</span></Text>
+                    <Text className="small">Pays: <span>{hotel.location}</span></Text>
+                    <Text className="small">Notes: <span className="highlight">{ratings}</span></Text>
+                    <Text className="small">Prix: <span>1500-5960€</span></Text>
                 </Details>
             </div>
             <Details style={{ marginTop: '20px' }}>

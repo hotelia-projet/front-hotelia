@@ -66,19 +66,19 @@ const MainMenu = () => {
 
     let menuOptions = [
         {
-            name: 'Acceuil',
+            name: 'Accueil',
             path: '/'
         },
         {
-            name: 'Reservation',
+            name: 'Réservation',
             path: '/bookings'
         },
         {
-            name: 'Modifier le compte',
+            name: 'Réglages',
             path: '/profile'
         },
         {
-            name: 'Deconnexion',
+            name: 'Déconnexion',
             path: '/logout'
         }
     ]

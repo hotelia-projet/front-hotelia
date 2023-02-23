@@ -16,7 +16,7 @@ const CustomerInfo = (props) => {
                 <div className="section">
                     <Text>Customer Info</Text>
                     <Text className="small">
-                        Name: <span>{user.name}</span>
+                        Nom: <span>{user.name}</span>
                     </Text>
                     <Text className="small">
                         Email: <span>{user.email}</span>
@@ -29,33 +29,33 @@ const CustomerInfo = (props) => {
                     </Text>
                 </div>
                 <div className="section">
-                    <Text>Booking Info</Text>
+                    <Text>Info réservation</Text>
                     <Text className="small">
                         Hotel: <span>{room.hotel.name}</span>
                     </Text>
                     <Text className="small">
-                        Room: <span>{room.name}</span>
+                        Chambre: <span>{room.name}</span>
                     </Text>
                     <Text className="small" style={{ margin: '-10px 0 10px 0' }}>
-                        Room Number(s): 
+                        Numéro de chambre(s): 
                         {booking.roomNumbers.map(r =>
                             (<span className="highlight" style={{ margin: '4px 2px' }}>{r}</span>)
                         )}
                     </Text>
                     <Text className="small">
-                        Price (Each room): <span>Rs. {room.price}</span>
+                        Prix (Par chambre): <span>{room.price} €</span>
                     </Text>
                     <Text className="small">
-                        Total Cost: <span>Rs. {booking.amount}</span>
+                        Cout total: <span>{booking.amount} €</span>
                     </Text>
                 </div>
             </Layout>
             <Layout className="buttons">
                 <FormButton onClick={() => navigate(`/payment/${room.hotel.id}/${room.id}/1`, {state: booking})}>
-                    Go Back
+                    Revenir en arrière
                 </FormButton>
                 <FormButton onClick={() => navigate(`/payment/${room.hotel.id}/${room.id}/2`, {state: booking})}>
-                    Confirm
+                    Confirmez
                 </FormButton>
             </Layout>
         </>
