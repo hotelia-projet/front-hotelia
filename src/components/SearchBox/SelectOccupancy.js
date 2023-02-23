@@ -43,7 +43,7 @@ const SelectOccupancy = (props) => {
             content={<SelectBox setCount={setCount} count={count} />}
             theme="light" >
             <OcpBox>
-                {count.children + count.adults} People
+                {count.children + count.adults} Personnes
             </OcpBox >
         </Tippy>
     )
@@ -75,7 +75,7 @@ const SelectBox = (props) => {
     return (
         <SelectionBox>
             <InputContainer style={{ marginRight: '26px' }}>
-                <label style={{ color: '#000', textAlign: 'center' }}>Children</label>
+                <label style={{ color: '#000', textAlign: 'center' }}>Enfants</label>
                 <div className="sec">
                     <RemoveCircleIcon onClick={() => dec('children')} className="icon" />
                     <Input value={count.children} placeholder="Number of children" type="number"
@@ -90,7 +90,7 @@ const SelectBox = (props) => {
                 </div>
             </InputContainer>
             <InputContainer>
-                <label style={{ color: '#000', textAlign: 'center' }}>Adults</label>
+                <label style={{ color: '#000', textAlign: 'center' }}>Adultes</label>
                 <div className="sec">
                     <RemoveCircleIcon onClick={() => dec('adults')} className="icon" />
                     <Input value={count.adults} placeholder="Number of adults" type="number"
