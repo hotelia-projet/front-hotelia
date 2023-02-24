@@ -20,7 +20,7 @@
 .header-content .collection{
   display: flex;
   align-items: center;
-  column-gap: 16px;
+  column-gap: 15px;
 }
 
 .collection .user-name{
@@ -28,7 +28,7 @@
     padding: 6px 10px;
     border-radius: 40px;
     color: #fff;
-    border: 2px solid #ff6e29;
+    border: 2px solid #fa6f2f;
     margin-right: 16px;
 }
 
@@ -36,7 +36,7 @@
     position: relative;
     width: 36px;
     height: 36px;
-    border: 2px solid #ff6e29;
+    border: 2px solid #f86622;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
