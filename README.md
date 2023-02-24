@@ -31,12 +31,17 @@ Ce projet utilise ReactJS, une bibliothèque JavaScript populaire pour créer de
 Le projet est structuré de la manière suivante:
 
 Front-hotelia/
+
   README.md
+  
   node_modules/
+  
   package.json
+  
   public/
     index.html
     favicon.ico
+    
   src/
     assets/
     components/
@@ -50,9 +55,13 @@ Front-hotelia/
     logo.svg
 
 README.md: ce fichier.
+
 node_modules/: répertoire contenant les dépendances du projet.
+
 package.json: fichier contenant les informations du projet ainsi que les dépendances.
+
 public/: répertoire contenant les fichiers statiques tels que index.html et favicon.ico.
+
 src/: répertoire contenant les fichiers sources du projet.
 
 # Contribuer
